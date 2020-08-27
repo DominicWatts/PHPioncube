@@ -23,5 +23,8 @@ RUN cd /tmp \
 
 RUN php -m
 
+# And clean up the image
+RUN rm -rf /var/lib/apt/lists/*
+
 VOLUME ["/code"]
 WORKDIR /code
