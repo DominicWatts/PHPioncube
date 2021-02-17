@@ -1,4 +1,4 @@
-FROM php:7.1-cli
+FROM php:7.2-cli
 MAINTAINER Dominic Xigen <dominic@xigen.co.uk>
 
 RUN php --version
@@ -19,7 +19,7 @@ RUN cd /tmp \
     && mkdir -p /usr/local/ \
     && mv ioncube /usr/local/ \
     && rm ioncube_loaders_lin_x86-64.tar.gz \
-    && echo "zend_extension=/usr/local/ioncube/ioncube_loader_lin_7.1.so" > $PHP_CONF_DIR/99_docker-php-ext-ioncube_loader_lin_7.1.ini
+    && echo "zend_extension=/usr/local/ioncube/ioncube_loader_lin_7.2.so" > $PHP_CONF_DIR/99_docker-php-ext-ioncube_loader_lin_7.2.ini
 
 RUN php -m
 
